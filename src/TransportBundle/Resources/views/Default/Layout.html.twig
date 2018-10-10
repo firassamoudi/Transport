@@ -1,6 +1,7 @@
 <html>
+{% block head %}
 <head>
-    {% block head %}
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Medilab Free Bootstrap HTML5 Template</title>
@@ -11,9 +12,10 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
-{% endblock %}
-</head>
 
+</head>
+{% endblock %}
+{% block body %}
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 <!--banner-->
 <section id="banner" class="banner">
@@ -448,5 +450,5 @@
 <script src="{{ asset('contactform/contactform.js') }}"></script>
 
 </body>
-
+{% endblock %}
 </html>
