@@ -85,6 +85,6 @@ fos_user:
             from_email:
                 address: noreply@transport.com
                 sender_name : Firas Samoudi First AppTransport
-            
+
 
 
