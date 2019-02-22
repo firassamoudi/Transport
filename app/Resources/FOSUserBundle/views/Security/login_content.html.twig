@@ -1,7 +1,7 @@
     {% trans_default_domain 'FOSUserBundle' %}
     <body class="text-center  font-family ">
     <div class=row>
-    <div class="container col-md-6 col-md-offset-3">
+         <div class="container col-md-6 col-md-offset-3">
     {% if error %}
         <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
@@ -30,5 +30,9 @@
         </div>
     </form>
         </div>
-    </div>
+        <div class="container col-md-6 col-md-offset-3">
+
+        </div>
+
+        </div>
     </body>
