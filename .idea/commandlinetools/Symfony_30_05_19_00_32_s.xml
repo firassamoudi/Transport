@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<framework xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemas/frameworkDescriptionVersion1.1.4.xsd" frameworkId="com.symfony" name="Symfony_26/09/18 10:21_s" invoke="C:\wamp64\bin\php\php5.6.25\php.exe C:\wamp64\www\symfony\bin\console" alias="s" enabled="true" version="2">
+<framework xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schemas/frameworkDescriptionVersion1.1.4.xsd" frameworkId="com.symfony" name="Symfony_30/05/19 00:32_s" invoke="C:\wamp64\bin\php\php5.6.40\php.exe C:\wamp64\www\symfony\bin\console" alias="s" enabled="true" version="2">
   <extraData><![CDATA[version:3]]></extraData>
   <command>
     <name>help</name>
@@ -742,6 +742,145 @@
     </optionsBefore>
   </command>
   <command>
+    <name>doctrine:cache:contains</name>
+    <help><![CDATA[Check if a cache entry exists<br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>cache-name cache-id</params>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>doctrine:cache:delete</name>
+    <help><![CDATA[Delete a cache entry<br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--all</td><td>(-a)</td><td>Delete all cache entries in provider</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>cache-name cache-id[=null]</params>
+    <optionsBefore>
+      <option name="--all" shortcut="-a">
+        <help><![CDATA[Delete all cache entries in provider]]></help>
+      </option>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>doctrine:cache:flush</name>
+    <help><![CDATA[Flush a given cache<br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>cache-name</params>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>doctrine:cache:stats</name>
+    <help><![CDATA[Get stats on a given cache provider<br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>cache-name</params>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
     <name>doctrine:database:create</name>
     <help><![CDATA[The <b>doctrine:database:create</b> command creates the default connections database:<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:database:create</b><br> <br> You can also optionally specify the name of a connection to create the database for:<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:database:create --connection=default</b><br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--shard</td><td></td><td>The shard connection to use for this command</td></tr> <tr><td>--connection</td><td></td><td>The connection to use for this command</td></tr> <tr><td>--if-not-exists</td><td></td><td>Don't trigger an error, when the database already exists</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
     <optionsBefore>
@@ -906,7 +1045,7 @@
   </command>
   <command>
     <name>doctrine:generate:crud</name>
-    <help><![CDATA[The <b>doctrine:generate:crud</b> command generates a CRUD based on a Doctrine entity.<br> <br> The default command only generates the list and show actions.<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:generate:crud --entity=AcmeBlogBundle:Post --route-prefix=post_admin</b><br> <br> Using the --with-write option allows to generate the new, edit and delete actions.<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:generate:crud --entity=AcmeBlogBundle:Post --route-prefix=post_admin --with-write</b><br> <br> Every generated file is based on a template. There are default templates but they can be overridden by placing custom templates in one of the following locations, by order of priority:<br> <br> <b>BUNDLE_PATH/Resources/SensioGeneratorBundle/skeleton/crud<br> APP_PATH/Resources/SensioGeneratorBundle/skeleton/crud</b><br> <br> And<br> <br> <b>__bundle_path__/Resources/SensioGeneratorBundle/skeleton/form<br> __project_root__/app/Resources/SensioGeneratorBundle/skeleton/form</b><br> <br> You can check https://github.com/sensio/SensioGeneratorBundle/tree/master/Resources/skeleton<br> in order to know the file structure of the skeleton<br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--entity</td><td></td><td>The entity class name to initialize (shortcut notation)</td></tr> <tr><td>--route-prefix</td><td></td><td>The route prefix</td></tr> <tr><td>--with-write</td><td></td><td>Whether or not to generate create, new and delete actions</td></tr> <tr><td>--format</td><td></td><td>The format used for configuration files (php, xml, yml, or annotation)</td></tr> <tr><td>--overwrite</td><td></td><td>Overwrite any existing controller or form class when generating the CRUD contents</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <help><![CDATA[The <b>doctrine:generate:crud</b> command generates a CRUD based on a Doctrine entity.<br> <br> The default command only generates the list and show actions.<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:generate:crud AcmeBlogBundle:Post --route-prefix=post_admin</b><br> <br> Using the --with-write option allows to generate the new, edit and delete actions.<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:generate:crud AcmeBlogBundle:Post --route-prefix=post_admin --with-write</b><br> <br> Every generated file is based on a template. There are default templates but they can be overridden by placing custom templates in one of the following locations, by order of priority:<br> <br> <b>BUNDLE_PATH/Resources/SensioGeneratorBundle/skeleton/crud<br> APP_PATH/Resources/SensioGeneratorBundle/skeleton/crud</b><br> <br> And<br> <br> <b>__bundle_path__/Resources/SensioGeneratorBundle/skeleton/form<br> __project_root__/app/Resources/SensioGeneratorBundle/skeleton/form</b><br> <br> You can check https://github.com/sensio/SensioGeneratorBundle/tree/master/Resources/skeleton<br> in order to know the file structure of the skeleton<br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--entity</td><td></td><td>The entity class name to initialize (shortcut notation)</td></tr> <tr><td>--route-prefix</td><td></td><td>The route prefix</td></tr> <tr><td>--with-write</td><td></td><td>Whether or not to generate create, new and delete actions</td></tr> <tr><td>--format</td><td></td><td>The format used for configuration files (php, xml, yml, or annotation)</td></tr> <tr><td>--overwrite</td><td></td><td>Overwrite any existing controller or form class when generating the CRUD contents</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
     <params>entity[=null]</params>
     <optionsBefore>
       <option name="--entity" shortcut="" pattern="equals">
@@ -995,7 +1134,8 @@
   </command>
   <command>
     <name>doctrine:generate:entity</name>
-    <help><![CDATA[The <b>doctrine:generate:entity</b> task generates a new Doctrine<br> entity inside a bundle:<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:generate:entity --entity=AcmeBlogBundle:Blog/Post</b><br> <br> The above command would initialize a new entity in the following entity<br> namespace <b>Acme\BlogBundle\Entity\Blog\Post</b>.<br> <br> You can also optionally specify the fields you want to generate in the new<br> entity:<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:generate:entity --entity=AcmeBlogBundle:Blog/Post --fields="title:string(255) body:text"</b><br> <br> By default, the command uses annotations for the mapping information; change it<br> with <comment>--format</comment>:<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:generate:entity --entity=AcmeBlogBundle:Blog/Post --format=yml</b><br> <br> To deactivate the interaction mode, simply use the <comment>--no-interaction</comment> option<br> without forgetting to pass all needed options:<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:generate:entity --entity=AcmeBlogBundle:Blog/Post --format=annotation --fields="title:string(255) body:text" --no-interaction</b><br> <br> This also has support for passing field specific attributes:<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:generate:entity --entity=AcmeBlogBundle:Blog/Post --format=annotation --fields="title:string(length=255 nullable=true unique=true) body:text ranking:decimal(precision:10 scale:0)" --no-interaction</b><br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--entity</td><td></td><td>The entity class name to initialize (shortcut notation)</td></tr> <tr><td>--fields</td><td></td><td>The fields to create with the new entity</td></tr> <tr><td>--format</td><td></td><td>Use the format for configuration files (php, xml, yml, or annotation)</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <help><![CDATA[The <b>doctrine:generate:entity</b> task generates a new Doctrine<br> entity inside a bundle:<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:generate:entity AcmeBlogBundle:Blog/Post</b><br> <br> The above command would initialize a new entity in the following entity<br> namespace <b>Acme\BlogBundle\Entity\Blog\Post</b>.<br> <br> You can also optionally specify the fields you want to generate in the new<br> entity:<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:generate:entity AcmeBlogBundle:Blog/Post --fields="title:string(255) body:text"</b><br> <br> By default, the command uses annotations for the mapping information; change it<br> with <comment>--format</comment>:<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:generate:entity AcmeBlogBundle:Blog/Post --format=yml</b><br> <br> To deactivate the interaction mode, simply use the <comment>--no-interaction</comment> option or its<br> alias <comment>-n</comment>, without forgetting to pass all needed options:<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:generate:entity AcmeBlogBundle:Blog/Post -n --format=annotation --fields="title:string(255) body:text"</b><br> <br> This also has support for passing field specific attributes:<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:generate:entity AcmeBlogBundle:Blog/Post -n --format=annotation --fields="title:string(length=255 nullable=true unique=true) body:text ranking:decimal(precision=10 scale=0)"</b><br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--entity</td><td></td><td>The entity class name to initialize (shortcut notation)</td></tr> <tr><td>--fields</td><td></td><td>The fields to create with the new entity</td></tr> <tr><td>--format</td><td></td><td>Use the format for configuration files (php, xml, yml, or annotation)</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>entity[=null]</params>
     <optionsBefore>
       <option name="--entity" shortcut="" pattern="equals">
         <help><![CDATA[The entity class name to initialize (shortcut notation)]]></help>
@@ -1126,8 +1266,8 @@
   </command>
   <command>
     <name>doctrine:mapping:import</name>
-    <help><![CDATA[The <b>doctrine:mapping:import</b> command imports mapping information<br> from an existing database:<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:mapping:import "MyCustomBundle" xml</b><br> <br> You can also optionally specify which entity manager to import from with the<br> <b>--em</b> option:<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:mapping:import "MyCustomBundle" xml --em=default</b><br> <br> If you don't want to map every entity that can be found in the database, use the<br> <b>--filter</b> option. It will try to match the targeted mapped entity with the<br> provided pattern string.<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:mapping:import "MyCustomBundle" xml --filter=MyMatchedEntity</b><br> <br> Use the <b>--force</b> option, if you want to override existing mapping files:<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:mapping:import "MyCustomBundle" xml --force</b><br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--em</td><td></td><td>The entity manager to use for this command</td></tr> <tr><td>--shard</td><td></td><td>The shard connection to use for this command</td></tr> <tr><td>--filter</td><td></td><td>A string pattern used to match entities that should be mapped.</td></tr> <tr><td>--force</td><td></td><td>Force to overwrite existing mapping files.</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
-    <params>bundle mapping-type[=null]</params>
+    <help><![CDATA[The <b>doctrine:mapping:import</b> command imports mapping information<br> from an existing database:<br> <br> Generate annotation mappings into the src/ directory using App as the namespace:<br> <b>php C:\wamp64\www\symfony\bin\console doctrine:mapping:import App\\Entity annotation --path=src/Entity</b><br> <br> Generate annotation mappings into the config/doctrine/ directory using App as the namespace:<br> <b>php C:\wamp64\www\symfony\bin\console doctrine:mapping:import App\\Entity xml --path=config/doctrine</b><br> <br> Generate XML mappings into a bundle:<br> <b>php C:\wamp64\www\symfony\bin\console doctrine:mapping:import "MyCustomBundle" xml</b><br> <br> You can also optionally specify which entity manager to import from with the<br> <b>--em</b> option:<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:mapping:import "MyCustomBundle" xml --em=default</b><br> <br> If you don't want to map every entity that can be found in the database, use the<br> <b>--filter</b> option. It will try to match the targeted mapped entity with the<br> provided pattern string.<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:mapping:import "MyCustomBundle" xml --filter=MyMatchedEntity</b><br> <br> Use the <b>--force</b> option, if you want to override existing mapping files:<br> <br> <b>php C:\wamp64\www\symfony\bin\console doctrine:mapping:import "MyCustomBundle" xml --force</b><br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--em</td><td></td><td>The entity manager to use for this command</td></tr> <tr><td>--shard</td><td></td><td>The shard connection to use for this command</td></tr> <tr><td>--filter</td><td></td><td>A string pattern used to match entities that should be mapped.</td></tr> <tr><td>--force</td><td></td><td>Force to overwrite existing mapping files.</td></tr> <tr><td>--path</td><td></td><td>The path where the files would be generated (not used when a bundle is passed).</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>name mapping-type[=null]</params>
     <optionsBefore>
       <option name="--em" shortcut="" pattern="equals">
         <help><![CDATA[The entity manager to use for this command]]></help>
@@ -1140,6 +1280,9 @@
       </option>
       <option name="--force" shortcut="">
         <help><![CDATA[Force to overwrite existing mapping files.]]></help>
+      </option>
+      <option name="--path" shortcut="" pattern="equals">
+        <help><![CDATA[The path where the files would be generated (not used when a bundle is passed).]]></help>
       </option>
       <option name="--help" shortcut="-h">
         <help><![CDATA[Display this help message]]></help>
@@ -1470,6 +1613,222 @@
     </optionsBefore>
   </command>
   <command>
+    <name>fos:user:activate</name>
+    <help><![CDATA[The <b>fos:user:activate</b> command activates a user (so they will be able to log in):<br> <br> <b>php C:\wamp64\www\symfony\bin\console fos:user:activate matthieu</b><br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>username</params>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>fos:user:change-password</name>
+    <help><![CDATA[The <b>fos:user:change-password</b> command changes the password of a user:<br> <br> <b>php C:\wamp64\www\symfony\bin\console fos:user:change-password matthieu</b><br> <br> This interactive shell will first ask you for a password.<br> <br> You can alternatively specify the password as a second argument:<br> <br> <b>php C:\wamp64\www\symfony\bin\console fos:user:change-password matthieu mypassword</b><br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>username password</params>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>fos:user:create</name>
+    <help><![CDATA[The <b>fos:user:create</b> command creates a user:<br> <br> <b>php C:\wamp64\www\symfony\bin\console fos:user:create matthieu</b><br> <br> This interactive shell will ask you for an email and then a password.<br> <br> You can alternatively specify the email and password as the second and third arguments:<br> <br> <b>php C:\wamp64\www\symfony\bin\console fos:user:create matthieu matthieu@example.com mypassword</b><br> <br> You can create a super admin via the super-admin flag:<br> <br> <b>php C:\wamp64\www\symfony\bin\console fos:user:create admin --super-admin</b><br> <br> You can create an inactive user (will not be able to log in):<br> <br> <b>php C:\wamp64\www\symfony\bin\console fos:user:create thibault --inactive</b><br> <br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--super-admin</td><td></td><td>Set the user as super admin</td></tr> <tr><td>--inactive</td><td></td><td>Set the user as inactive</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>username email password</params>
+    <optionsBefore>
+      <option name="--super-admin" shortcut="">
+        <help><![CDATA[Set the user as super admin]]></help>
+      </option>
+      <option name="--inactive" shortcut="">
+        <help><![CDATA[Set the user as inactive]]></help>
+      </option>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>fos:user:deactivate</name>
+    <help><![CDATA[The <b>fos:user:deactivate</b> command deactivates a user (will not be able to log in)<br> <br> <b>php C:\wamp64\www\symfony\bin\console fos:user:deactivate matthieu</b><br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>username</params>
+    <optionsBefore>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>fos:user:demote</name>
+    <help><![CDATA[The <b>fos:user:demote</b> command demotes a user by removing a role<br> <br> <b>php C:\wamp64\www\symfony\bin\console fos:user:demote matthieu ROLE_CUSTOM</b><br> <b>php C:\wamp64\www\symfony\bin\console fos:user:demote --super matthieu</b><br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--super</td><td></td><td>Instead specifying role, use this to quickly add the super administrator role</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>username role[=null]</params>
+    <optionsBefore>
+      <option name="--super" shortcut="">
+        <help><![CDATA[Instead specifying role, use this to quickly add the super administrator role]]></help>
+      </option>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
+    <name>fos:user:promote</name>
+    <help><![CDATA[The <b>fos:user:promote</b> command promotes a user by adding a role<br> <br> <b>php C:\wamp64\www\symfony\bin\console fos:user:promote matthieu ROLE_CUSTOM</b><br> <b>php C:\wamp64\www\symfony\bin\console fos:user:promote --super matthieu</b><br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--super</td><td></td><td>Instead specifying role, use this to quickly add the super administrator role</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <params>username role[=null]</params>
+    <optionsBefore>
+      <option name="--super" shortcut="">
+        <help><![CDATA[Instead specifying role, use this to quickly add the super administrator role]]></help>
+      </option>
+      <option name="--help" shortcut="-h">
+        <help><![CDATA[Display this help message]]></help>
+      </option>
+      <option name="--quiet" shortcut="-q">
+        <help><![CDATA[Do not output any message]]></help>
+      </option>
+      <option name="--verbose" shortcut="-v">
+        <help><![CDATA[Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug]]></help>
+      </option>
+      <option name="--version" shortcut="-V">
+        <help><![CDATA[Display this application version]]></help>
+      </option>
+      <option name="--ansi" shortcut="">
+        <help><![CDATA[Force ANSI output]]></help>
+      </option>
+      <option name="--no-ansi" shortcut="">
+        <help><![CDATA[Disable ANSI output]]></help>
+      </option>
+      <option name="--no-interaction" shortcut="-n">
+        <help><![CDATA[Do not ask any interactive question]]></help>
+      </option>
+      <option name="--env" shortcut="-e" pattern="equals">
+        <help><![CDATA[The Environment name.]]></help>
+      </option>
+      <option name="--no-debug" shortcut="">
+        <help><![CDATA[Switches off debug mode.]]></help>
+      </option>
+    </optionsBefore>
+  </command>
+  <command>
     <name>generate:bundle</name>
     <help><![CDATA[The <b>generate:bundle</b> command helps you generates new bundles.<br> <br> By default, the command interacts with the developer to tweak the generation.<br> Any passed option will be used as a default value for the interaction<br> (<comment>--namespace</comment> is the only one needed if you follow the<br> conventions):<br> <br> <b>php C:\wamp64\www\symfony\bin\console generate:bundle --namespace=Acme/BlogBundle</b><br> <br> Note that you can use <comment>/</comment> instead of <comment>\ </comment>for the namespace delimiter to avoid any<br> problems.<br> <br> If you want to disable any user interaction, use <comment>--no-interaction</comment> but don't forget to pass all needed options:<br> <br> <b>php C:\wamp64\www\symfony\bin\console generate:bundle --namespace=Acme/BlogBundle --dir=src [--bundle-name=...] --no-interaction</b><br> <br> Note that the bundle namespace must end with "Bundle".<br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--namespace</td><td></td><td>The namespace of the bundle to create</td></tr> <tr><td>--dir</td><td></td><td>The directory where to create the bundle</td></tr> <tr><td>--bundle-name</td><td></td><td>The optional bundle name</td></tr> <tr><td>--format</td><td></td><td>Use the format for configuration files (php, xml, yml, or annotation)</td></tr> <tr><td>--shared</td><td></td><td>Are you planning on sharing this bundle across multiple applications?</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
     <optionsBefore>
@@ -1519,7 +1878,7 @@
   </command>
   <command>
     <name>generate:command</name>
-    <help><![CDATA[The <b>generate:command</b> command helps you generate new commands<br> inside bundles. Provide the bundle name as the first argument and the command<br> name as the second argument:<br> <br> <b>php app/console generate:command AppBundle blog:publish-posts</b><br> <br> If any of the arguments is missing, the command will ask for their values<br> interactively. If you want to disable any user interaction, use<br> <comment>--no-interaction</comment>, but don't forget to pass all needed arguments.<br> <br> Every generated file is based on a template. There are default templates but they can<br> be overridden by placing custom templates in one of the following locations, by order of priority:<br> <br> <b>BUNDLE_PATH/Resources/SensioGeneratorBundle/skeleton/command<br> APP_PATH/Resources/SensioGeneratorBundle/skeleton/command</b><br> <br> You can check https://github.com/sensio/SensioGeneratorBundle/tree/master/Resources/skeleton<br> in order to know the file structure of the skeleton.<br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
+    <help><![CDATA[The <b>generate:command</b> command helps you generate new commands<br> inside bundles. Provide the bundle name as the first argument and the command<br> name as the second argument:<br> <br> <b>php C:\wamp64\www\symfony\bin\console generate:command AppBundle blog:publish-posts</b><br> <br> If any of the arguments is missing, the command will ask for their values<br> interactively. If you want to disable any user interaction, use<br> <comment>--no-interaction</comment>, but don't forget to pass all needed arguments.<br> <br> Every generated file is based on a template. There are default templates but they can<br> be overridden by placing custom templates in one of the following locations, by order of priority:<br> <br> <b>BUNDLE_PATH/Resources/SensioGeneratorBundle/skeleton/command<br> APP_PATH/Resources/SensioGeneratorBundle/skeleton/command</b><br> <br> You can check https://github.com/sensio/SensioGeneratorBundle/tree/master/Resources/skeleton<br> in order to know the file structure of the skeleton.<br/><br/><table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> </table> <br/>]]></help>
     <params>bundle[=null] name[=null]</params>
     <optionsBefore>
       <option name="--help" shortcut="-h">
@@ -2113,6 +2472,6 @@
       </option>
     </optionsBefore>
   </command>
-  <help><![CDATA[<p>Usage:<br> [options] command [arguments] </p><br> <table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> </table> <br/> <table> <tr><td><strong>Available commands:</strong></td></tr> <tr><td>help</td><td>Displays help for a command</td></tr> <tr><td>list</td><td>Lists commands</td></tr> <tr><td>assets:install</td><td>Installs bundles web assets under a public web directory</td></tr> <tr><td>cache:clear</td><td>Clears the cache</td></tr> <tr><td>cache:warmup</td><td>Warms up an empty cache</td></tr> <tr><td>config:dump-reference</td><td>Dumps the default configuration for an extension</td></tr> <tr><td>debug:config</td><td>Dumps the current configuration for an extension</td></tr> <tr><td>debug:container</td><td>Displays current services for an application</td></tr> <tr><td>debug:event-dispatcher</td><td>Displays configured listeners for an application</td></tr> <tr><td>debug:router</td><td>Displays current routes for an application</td></tr> <tr><td>debug:swiftmailer</td><td>Displays current mailers for an application</td></tr> <tr><td>debug:translation</td><td>Displays translation messages information</td></tr> <tr><td>debug:twig</td><td>Shows a list of twig functions, filters, globals and tests</td></tr> <tr><td>doctrine:cache:clear-collection-region</td><td>Clear a second-level cache collection region.</td></tr> <tr><td>doctrine:cache:clear-entity-region</td><td>Clear a second-level cache entity region.</td></tr> <tr><td>doctrine:cache:clear-metadata</td><td>Clears all metadata cache for an entity manager</td></tr> <tr><td>doctrine:cache:clear-query</td><td>Clears all query cache for an entity manager</td></tr> <tr><td>doctrine:cache:clear-query-region</td><td>Clear a second-level cache query region.</td></tr> <tr><td>doctrine:cache:clear-result</td><td>Clears result cache for an entity manager</td></tr> <tr><td>doctrine:database:create</td><td>Creates the configured database</td></tr> <tr><td>doctrine:database:drop</td><td>Drops the configured database</td></tr> <tr><td>doctrine:database:import</td><td>Import SQL file(s) directly to Database.</td></tr> <tr><td>doctrine:ensure-production-settings</td><td>Verify that Doctrine is properly configured for a production environment.</td></tr> <tr><td>doctrine:generate:crud</td><td>Generates a CRUD based on a Doctrine entity</td></tr> <tr><td>doctrine:generate:entities</td><td>Generates entity classes and method stubs from your mapping information</td></tr> <tr><td>doctrine:generate:entity</td><td>Generates a new Doctrine entity inside a bundle</td></tr> <tr><td>doctrine:generate:form</td><td>Generates a form type class based on a Doctrine entity</td></tr> <tr><td>doctrine:mapping:convert</td><td>Convert mapping information between supported formats.</td></tr> <tr><td>doctrine:mapping:import</td><td>Imports mapping information from an existing database</td></tr> <tr><td>doctrine:mapping:info</td><td></td></tr> <tr><td>doctrine:query:dql</td><td>Executes arbitrary DQL directly from the command line.</td></tr> <tr><td>doctrine:query:sql</td><td>Executes arbitrary SQL directly from the command line.</td></tr> <tr><td>doctrine:schema:create</td><td>Executes (or dumps) the SQL needed to generate the database schema</td></tr> <tr><td>doctrine:schema:drop</td><td>Executes (or dumps) the SQL needed to drop the current database schema</td></tr> <tr><td>doctrine:schema:update</td><td>Executes (or dumps) the SQL needed to update the database schema to match the current mapping metadata.</td></tr> <tr><td>doctrine:schema:validate</td><td>Validate the mapping files.</td></tr> <tr><td>generate:bundle</td><td>Generates a bundle</td></tr> <tr><td>generate:command</td><td>Generates a console command</td></tr> <tr><td>generate:controller</td><td>Generates a controller</td></tr> <tr><td>lint:twig</td><td>Lints a template and outputs encountered errors</td></tr> <tr><td>lint:yaml</td><td>Lints a file and outputs encountered errors</td></tr> <tr><td>router:match</td><td>Helps debug routes by simulating a path info match</td></tr> <tr><td>security:check</td><td>Checks security issues in your project dependencies</td></tr> <tr><td>security:encode-password</td><td>Encodes a password.</td></tr> <tr><td>server:run</td><td>Runs PHP built-in web server</td></tr> <tr><td>server:start</td><td>Starts PHP built-in web server in the background</td></tr> <tr><td>server:status</td><td>Outputs the status of the built-in web server for the given address</td></tr> <tr><td>server:stop</td><td>Stops PHP's built-in web server that was started with the server:start command</td></tr> <tr><td>swiftmailer:email:send</td><td>Send simple email message</td></tr> <tr><td>swiftmailer:spool:send</td><td>Sends emails from the spool</td></tr> <tr><td>translation:update</td><td>Updates the translation file</td></tr> </table> <br/>]]></help>
+  <help><![CDATA[<p>Usage:<br> [options] command [arguments] </p><br> <table> <tr><td><strong>Options:</strong></td></tr> <tr><td>--no-interaction</td><td>(-n)</td><td>Do not ask any interactive question</td></tr> <tr><td>--ansi</td><td></td><td>Force ANSI output</td></tr> <tr><td>--help</td><td>(-h)</td><td>Display this help message</td></tr> <tr><td>--no-ansi</td><td></td><td>Disable ANSI output</td></tr> <tr><td>--quiet</td><td>(-q)</td><td>Do not output any message</td></tr> <tr><td>--no-debug</td><td></td><td>Switches off debug mode.</td></tr> <tr><td>--version</td><td>(-V)</td><td>Display this application version</td></tr> <tr><td>--verbose</td><td>(-v)</td><td>Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug</td></tr> <tr><td>--env</td><td>(-e)</td><td>The Environment name.</td></tr> </table> <br/> <table> <tr><td><strong>Available commands:</strong></td></tr> <tr><td>help</td><td>Displays help for a command</td></tr> <tr><td>list</td><td>Lists commands</td></tr> <tr><td>assets:install</td><td>Installs bundles web assets under a public web directory</td></tr> <tr><td>cache:clear</td><td>Clears the cache</td></tr> <tr><td>cache:warmup</td><td>Warms up an empty cache</td></tr> <tr><td>config:dump-reference</td><td>Dumps the default configuration for an extension</td></tr> <tr><td>debug:config</td><td>Dumps the current configuration for an extension</td></tr> <tr><td>debug:container</td><td>Displays current services for an application</td></tr> <tr><td>debug:event-dispatcher</td><td>Displays configured listeners for an application</td></tr> <tr><td>debug:router</td><td>Displays current routes for an application</td></tr> <tr><td>debug:swiftmailer</td><td>Displays current mailers for an application</td></tr> <tr><td>debug:translation</td><td>Displays translation messages information</td></tr> <tr><td>debug:twig</td><td>Shows a list of twig functions, filters, globals and tests</td></tr> <tr><td>doctrine:cache:clear-collection-region</td><td>Clear a second-level cache collection region.</td></tr> <tr><td>doctrine:cache:clear-entity-region</td><td>Clear a second-level cache entity region.</td></tr> <tr><td>doctrine:cache:clear-metadata</td><td>Clears all metadata cache for an entity manager</td></tr> <tr><td>doctrine:cache:clear-query</td><td>Clears all query cache for an entity manager</td></tr> <tr><td>doctrine:cache:clear-query-region</td><td>Clear a second-level cache query region.</td></tr> <tr><td>doctrine:cache:clear-result</td><td>Clears result cache for an entity manager</td></tr> <tr><td>doctrine:cache:contains</td><td>Check if a cache entry exists</td></tr> <tr><td>doctrine:cache:delete</td><td>Delete a cache entry</td></tr> <tr><td>doctrine:cache:flush</td><td>Flush a given cache</td></tr> <tr><td>doctrine:cache:stats</td><td>Get stats on a given cache provider</td></tr> <tr><td>doctrine:database:create</td><td>Creates the configured database</td></tr> <tr><td>doctrine:database:drop</td><td>Drops the configured database</td></tr> <tr><td>doctrine:database:import</td><td>Import SQL file(s) directly to Database.</td></tr> <tr><td>doctrine:ensure-production-settings</td><td>Verify that Doctrine is properly configured for a production environment.</td></tr> <tr><td>doctrine:generate:crud</td><td>Generates a CRUD based on a Doctrine entity</td></tr> <tr><td>doctrine:generate:entities</td><td>Generates entity classes and method stubs from your mapping information</td></tr> <tr><td>doctrine:generate:entity</td><td>Generates a new Doctrine entity inside a bundle</td></tr> <tr><td>doctrine:generate:form</td><td>Generates a form type class based on a Doctrine entity</td></tr> <tr><td>doctrine:mapping:convert</td><td>Convert mapping information between supported formats.</td></tr> <tr><td>doctrine:mapping:import</td><td>Imports mapping information from an existing database</td></tr> <tr><td>doctrine:mapping:info</td><td></td></tr> <tr><td>doctrine:query:dql</td><td>Executes arbitrary DQL directly from the command line.</td></tr> <tr><td>doctrine:query:sql</td><td>Executes arbitrary SQL directly from the command line.</td></tr> <tr><td>doctrine:schema:create</td><td>Executes (or dumps) the SQL needed to generate the database schema</td></tr> <tr><td>doctrine:schema:drop</td><td>Executes (or dumps) the SQL needed to drop the current database schema</td></tr> <tr><td>doctrine:schema:update</td><td>Executes (or dumps) the SQL needed to update the database schema to match the current mapping metadata.</td></tr> <tr><td>doctrine:schema:validate</td><td>Validate the mapping files.</td></tr> <tr><td>fos:user:activate</td><td>Activate a user</td></tr> <tr><td>fos:user:change-password</td><td>Change the password of a user.</td></tr> <tr><td>fos:user:create</td><td>Create a user.</td></tr> <tr><td>fos:user:deactivate</td><td>Deactivate a user</td></tr> <tr><td>fos:user:demote</td><td>Demote a user by removing a role</td></tr> <tr><td>fos:user:promote</td><td>Promotes a user by adding a role</td></tr> <tr><td>generate:bundle</td><td>Generates a bundle</td></tr> <tr><td>generate:command</td><td>Generates a console command</td></tr> <tr><td>generate:controller</td><td>Generates a controller</td></tr> <tr><td>lint:twig</td><td>Lints a template and outputs encountered errors</td></tr> <tr><td>lint:yaml</td><td>Lints a file and outputs encountered errors</td></tr> <tr><td>router:match</td><td>Helps debug routes by simulating a path info match</td></tr> <tr><td>security:check</td><td>Checks security issues in your project dependencies</td></tr> <tr><td>security:encode-password</td><td>Encodes a password.</td></tr> <tr><td>server:run</td><td>Runs PHP built-in web server</td></tr> <tr><td>server:start</td><td>Starts PHP built-in web server in the background</td></tr> <tr><td>server:status</td><td>Outputs the status of the built-in web server for the given address</td></tr> <tr><td>server:stop</td><td>Stops PHP's built-in web server that was started with the server:start command</td></tr> <tr><td>swiftmailer:email:send</td><td>Send simple email message</td></tr> <tr><td>swiftmailer:spool:send</td><td>Sends emails from the spool</td></tr> <tr><td>translation:update</td><td>Updates the translation file</td></tr> </table> <br/>]]></help>
 </framework>
 
